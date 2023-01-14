@@ -1,0 +1,128 @@
+html {
+    /* linkki properties */
+    --linkki-input-background: var(--lumo-contrast-10pct);
+    --linkki-input-background-hover: var(--lumo-contrast-20pct);
+    --linkki-input-border-color-readonly: var(--lumo-contrast-20pct);
+    --linkki-readonly-text-color: var(--lumo-body-text-color);
+
+    --linkki-info-color: hsla(213, 80%, 70%, 1);
+    --linkki-info-color-10pct: hsla(213, 80%, 50%, 0.13);
+    --linkki-info-color-50pct: hsla(213, 80%, 50%, 0.8);
+    --linkki-warning-color: hsla(50, 80%, 50%, 1);
+    --linkki-warning-color-10pct: hsla(50, 80%, 50%, 0.2);
+    --linkki-warning-color-50pct: hsla(50, 80%, 40%, 0.8);
+    
+    --linkki-section-gap: var(--lumo-space-l);
+    
+    /* lumo properties */
+    --lumo-error-color: hsla(0, 61%, 54%, 1);
+    --lumo-clickable-cursor: pointer;
+    
+    /* prefer 'Segoe UI' over Roboto */ 
+    --lumo-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+[theme~="dark"] {
+    /* needs to be set again to respect the dark lumo values */
+    --linkki-input-background: var(--lumo-contrast-10pct);
+    --linkki-input-background-hover: var(--lumo-contrast-20pct);
+    --linkki-input-border-color-readonly: var(--lumo-contrast-20pct);
+    --linkki-readonly-text-color: var(--lumo-body-text-color);
+    
+    --linkki-info-color: hsla(213, 80%, 70%, 1);
+    --linkki-info-color-10pct: hsla(213, 80%, 70%, 0.3);
+    --linkki-info-color-50pct: hsla(213, 80%, 70%, 0.8);
+    --linkki-warning-color: hsla(50, 80%, 50%, 1);
+    --linkki-warning-color-10pct: hsla(50, 80%, 50%, 0.3);
+    --linkki-warning-color-50pct: hsla(50, 80%, 70%, 0.8);
+
+    /* lumo properties */
+    --lumo-error-color: hsla(0, 61%, 54%, 1);
+}
+
+[theme~="compact"] {
+  --lumo-size-xl: 3rem;
+  --lumo-size-l: 2.5rem;
+  --lumo-size-m: 2rem;
+  --lumo-size-s: 1.75rem;
+  --lumo-size-xs: 1.5rem;
+  --lumo-space-xl: 2rem;
+  --lumo-space-l: 1.375rem;
+  --lumo-space-m: 0.7rem;
+  --lumo-space-s: 0.35rem;
+  --lumo-space-xs: 0.2rem;
+} 
+
+a:not([href]) {
+    color: inherit;
+    text-decoration: none;
+    pointer-events: none;
+}
+
+.linkki-right-aligned > span {
+    text-align: right;
+}
+
+.linkki-grid-footer-sum {
+    --linkki-footer-alignment: right;
+    --linkki-footer-text-shadow: 0 .1px 0 currentColor;
+}
+
+.linkki-grid-footer-bold {
+    --linkki-footer-text-shadow: 0 .1px 0 currentColor;
+}
+
+[severity="info"] {
+    --lumo-error-color-10pct: var(--linkki-info-color-10pct);
+    --lumo-error-color-50pct: var(--linkki-info-color-50pct);
+    --lumo-error-text-color: var(--linkki-info-color-50pct);
+}
+[severity="warning"] {
+    --lumo-error-color-10pct: var(--linkki-warning-color-10pct);
+    --lumo-error-color-50pct: var(--linkki-warning-color-50pct);
+    --lumo-error-text-color: var(--linkki-warning-color-50pct);
+}
+
+/* 
+ * FONT MAPPING FOR SEGOE UI
+ *
+ * these font-faces set the font-weight settings for Segoe UI
+ * as they are interpreted in Chrome on Windows.
+*/
+
+
+@font-face {
+  font-family: 'Segoe UI';
+  font-weight: 1 199;
+  src: local("Segoe UI Light");
+}
+
+@font-face {
+  font-family: 'Segoe UI';
+  font-weight: 200 399;
+  src: local("Segoe UI Semilight");
+}
+
+@font-face {
+  font-family: 'Segoe UI';
+  font-weight: 400 499;
+  src: local("Segoe UI");
+}
+
+@font-face {
+  font-family: 'Segoe UI';
+  font-weight: 500 699;
+  src: local("Segoe UI Semibold");
+}
+
+@font-face {
+  font-family: 'Segoe UI';
+  font-weight: 700 799;
+  src: local("Segoe UI Bold");
+}
+
+@font-face {
+  font-family: 'Segoe UI';
+  font-weight: 800 999;
+  src: local("Segoe UI Black");
+}

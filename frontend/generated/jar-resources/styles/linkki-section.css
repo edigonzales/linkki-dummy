@@ -1,0 +1,23 @@
+linkki-section {
+    --section-item-width: calc((100% - (var(--columns, 1) - 1) * var(--linkki-section-gap)) / var(--columns, 1));
+}
+
+linkki-section > div[slot="content"] > * {
+    max-width: var(--section-item-width);
+}
+
+.linkki-section-caption-text {
+    margin: 0;
+    line-height: var(--lumo-size-s);
+    font-weight: 400;
+}
+
+.placeholder-label {
+   font-style: italic;
+   opacity: 0.7;
+}
+
+linkki-section vaadin-form-item .placeholder-label {
+  position: relative;
+  left: calc(-1 * var(--linkki-form-item-label-width, 8em));
+}
